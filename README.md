@@ -1,15 +1,15 @@
 # Linear Algebra – Space Simulation (IIIN-LINAL)
 
 > **Linal Eindopdracht** for the course **Lineaire Algebra (IIIN-LINAL)**  
-> Made using **C++** and **SDL**.  
+> Made using **C++** and **SDL**  
 > **Author:** Ferran Hendriks
 
 This repository contains the final assignment (*Linal Eindopdracht*) for the course **Lineaire Algebra (IIIN-LINAL)**.  
 It is a small **space simulation** that demonstrates how linear algebra is used in game development for:
 
-- Movement (forward motion and rotation)
-- Transformations with matrices
-- Basic collision / “hit” logic in space
+- Movement (forward motion and rotation)  
+- Transformations with matrices  
+- Basic collision / “hit” logic in space  
 
 ---
 
@@ -52,29 +52,14 @@ The space simulation in this repository ties these topics together in a practica
 
 At the top level you’ll find:
 
-- `Space-Simulation/`  
-  Main project containing the space simulation source code and project files.
-
-- `Space-Simulation-UnitTest/`  
-  Unit test project for testing core functions and math used in the simulation.
-
-- `External Libraries/SDL2/`  
-  Bundled **SDL2** headers/libraries used by the project (for graphics and input).
-
-- `Linal-Eindopdracht-Ferran-Nick.sln`  
-  Visual Studio solution file that opens the complete assignment (simulation + tests).
-
-- `LINAL_Assessment_2020-11-13.pdf`  
-  Original assignment description (assessment document).
-
-- `Beoordeling LINAL Assessment 2020-11-13.pdf`  
-  Evaluation / grading document for the assignment.
-
-- `.gitattributes`, `.gitignore`  
-  Standard Git configuration files.
-
-- `README.md`  
-  This file.
+- `Space-Simulation/` — main project containing the space simulation source code and project files  
+- `Space-Simulation-UnitTest/` — unit test project for testing core functions and math used in the simulation  
+- `External Libraries/SDL2/` — bundled **SDL2** headers/libraries used by the project (for graphics and input)  
+- `Linal-Eindopdracht-Ferran-Nick.sln` — Visual Studio solution file (simulation + tests)  
+- `LINAL_Assessment_2020-11-13.pdf` — original assignment description  
+- `Beoordeling LINAL Assessment 2020-11-13.pdf` — evaluation / grading document  
+- `.gitattributes`, `.gitignore` — standard Git configuration files  
+- `README.md` — this file  
 
 ---
 
@@ -82,17 +67,9 @@ At the top level you’ll find:
 
 To build and run the project, you typically need:
 
-- **Operating system**
-  - Windows (originally developed and tested on Windows)
-
-- **Tools**
-  - **Microsoft Visual Studio** (2019 or later recommended) with C++ support
-  - A C/C++ compiler compatible with the solution file
-
-- **Libraries**
-  - **SDL2**  
-    The repository already contains an `External Libraries/SDL2/` folder with the required files.  
-    If you prefer, you can point the project to a system-wide SDL2 installation instead.
+- **Operating system:** Windows (originally developed and tested on Windows)  
+- **Tools:** Microsoft Visual Studio (2019 or later recommended) with C++ support  
+- **Libraries:** SDL2 (already included in `External Libraries/SDL2/`)  
 
 ---
 
@@ -103,196 +80,99 @@ To build and run the project, you typically need:
 ```bash
 git clone https://github.com/ferrannl/Linear-Algebra.git
 cd Linear-Algebra
+```
 
-Opening in Visual Studio (Windows)
+### Opening in Visual Studio (Windows)
 
-1. Start Visual Studio.
-
-
-2. Open the solution file:
-Linal-Eindopdracht-Ferran-Nick.sln
-
-
-3. After opening, you should see (at least) the following projects:
-
-Space-Simulation
-
-Space-Simulation-UnitTest
-
-
-
-
+1. Start Visual Studio  
+2. Open the solution file: `Linal-Eindopdracht-Ferran-Nick.sln`  
+3. After opening, you should see at least the following projects:
+   - `Space-Simulation`  
+   - `Space-Simulation-UnitTest`  
 
 ---
 
-Building and Running
+## Building and Running
 
-1. Select Startup Project
+1. **Select Startup Project**  
+   In Visual Studio, set `Space-Simulation` as the Startup Project  
 
-In Visual Studio, set Space-Simulation as the Startup Project.
+2. **Check SDL2 Paths (if necessary)**  
+   - C/C++ → General → Additional Include Directories → `External Libraries/SDL2/include`  
+   - Linker → General → Additional Library Directories → `External Libraries/SDL2/lib`  
+   - Ensure the SDL2 `.dll` is accessible (next to the executable or on your PATH)  
 
+3. **Build**  
+   Choose Debug or Release configuration  
+   Build → Build Solution (or press **Ctrl+Shift+B**)  
 
-2. Check SDL2 Paths (if necessary)
-
-The project is configured to use SDL2 from External Libraries/SDL2/.
-If you get errors about missing headers or libraries:
-
-Right-click the Space-Simulation project → Properties.
-
-Under C/C++ → General → Additional Include Directories
-ensure it points to:
-External Libraries/SDL2/include
-
-Under Linker → General → Additional Library Directories
-ensure it points to:
-External Libraries/SDL2/lib (or the correct lib folder).
-
-Make sure the SDL2 .dll is accessible (next to the executable or on your PATH).
-
-
-
-3. Build
-
-Choose Debug or Release configuration.
-
-Build the solution:
-Build → Build Solution (or press Ctrl + Shift + B).
-
-
-
-4. Run
-
-Start the simulation with F5 (Run with debugger) or Ctrl + F5 (Run without debugger).
-
-An SDL window should open showing the space simulation where the linear algebra code is used to move/rotate objects, etc.
-
-
-
-
+4. **Run**  
+   Start the simulation with **F5** (debugger) or **Ctrl+F5** (without debugger)  
+   An SDL window should open showing the space simulation  
 
 ---
 
-Unit Tests
+## Unit Tests
 
-The Space-Simulation-UnitTest project contains tests for parts of the math/logic used by the main simulation.
+The `Space-Simulation-UnitTest` project contains tests for parts of the math/logic used by the main simulation.
 
 To run the tests:
 
-1. Set Space-Simulation-UnitTest as the Startup Project.
-
-
-2. Build and run that project:
-
-This will execute the configured unit tests.
-
-
-
-3. Alternatively, use Visual Studio’s Test Explorer (if configured) to run tests individually.
-
-
-
-(Details may depend on the specific test framework used in the project.)
-
+1. Set `Space-Simulation-UnitTest` as the Startup Project  
+2. Build and run the project  
+3. Alternatively, use Visual Studio’s **Test Explorer** to run tests individually  
 
 ---
 
-Course / Assignment Documents
+## Course / Assignment Documents
 
-This repository also links to the original assignment and evaluation documents:
+This repository also includes the original assignment and evaluation documents:
 
-Assignment (Opdracht):
-LINAL_Assessment_2020-11-13.pdf
-
-Grading (Beoordeling):
-Beoordeling LINAL Assessment 2020-11-13.pdf
-
+- **Assignment (Opdracht):** `LINAL_Assessment_2020-11-13.pdf`  
+- **Grading (Beoordeling):** `Beoordeling LINAL Assessment 2020-11-13.pdf`  
 
 These describe:
-
-The goals of the course
-
-The requirements of the final assignment
-
-The criteria used for grading this project
-
-
+- The goals of the course  
+- The requirements of the final assignment  
+- The criteria used for grading this project  
 
 ---
 
-Linear Algebra Concepts
+## Linear Algebra Concepts
 
-The project demonstrates several core linear algebra topics that are common in games and simulations:
+The project demonstrates several core linear algebra topics common in games and simulations:
 
-Vectors & Points
+- **Vectors & Points**  
+  Positions and directions in space, vector addition/subtraction, normalization  
 
-Positions and directions in space
+- **Matrices**  
+  Representing transformations, matrix multiplication to combine transformations  
 
-Vector addition and subtraction
+- **Transformations**  
+  Translation, scaling, rotation in 2D and 3D  
 
-Normalization
+- **Dot Product & Cross Product**  
+  Dot product for angles/projections, cross product for normals/orientation in 3D  
 
-
-Matrices
-
-Using matrices to represent transformations
-
-Matrix multiplication to combine transformations
-
-
-Transformations
-
-Translation (moving objects)
-
-Scaling (changing size)
-
-Rotation in 2D and 3D
-
-
-Dot Product & Cross Product
-
-Dot product for angles and projections
-
-Cross product for normals and orientation in 3D
-
-
-Geometry & Intersections
-
-Distances between objects
-
-Basic collision / “hit” detection
-
-Lines, planes and intersection logic
-
-
-
+- **Geometry & Intersections**  
+  Distances between objects, basic collision detection, lines/planes/intersection logic  
 
 ---
 
-Notes
+## Notes
 
-This repository serves primarily as an archive of a school assignment.
-
-No explicit open-source license file is included.
-If you want to reuse or extend this code, please contact the author first.
-
-Language mix:
-
-The course description and context are originally in Dutch.
-
-This README is written in English for broader accessibility.
-
-
-
+- This repository serves primarily as an archive of a school assignment  
+- No explicit open-source license file is included — contact the author before reuse  
+- The course description/context are originally in Dutch  
+- This README is written in English for broader accessibility  
 
 ---
 
-Author
+## Author
 
-Ferran Hendriks
-
-Creator of the IIIN-LINAL space simulation final assignment
-
-Implemented using C++ and SDL
-
+**Ferran Hendriks**  
+Creator of the IIIN-LINAL space simulation final assignment  
+Implemented using **C++** and **SDL**  
 
 If you have questions about the project, the course, or the code, feel free to open an issue or contact the author.
+```
