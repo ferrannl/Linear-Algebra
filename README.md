@@ -1,3 +1,5 @@
+![Linal gameplay](logo.gif)
+
 # Linear Algebra – Space Simulation (IIIN-LINAL)
 
 > **Linal Eindopdracht** for the course **Lineaire Algebra (IIIN-LINAL)**  
